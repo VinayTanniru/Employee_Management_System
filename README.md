@@ -6,7 +6,7 @@ A modern, high-end Spring MVC application for managing employee directories with
 
 - **Full CRUD Operations**: Add, View, Update, and Delete employee records.
 - **Premium UI/UX**: Glassmorphic dark-mode design using **Plus Jakarta Sans** and **FontAwesome 6** icons.
-- **Dynamic Routing**: Built-in redirection from root to home page for seamless navigation.
+- **Dynamic Routing**: Simplified navigation with root context path.
 - **Robust Backend**: Refactored `com.ems` package structure with Hibernate ORM and MySQL integration.
 - **Responsive Design**: Optimized for all screen sizes, from desktop to mobile.
 
@@ -40,20 +40,16 @@ The application uses a database named `spring`. Ensure it exists and update the 
 ### Running the Application
 
 1. **Clone the repository** (if applicable).
-2. **Navigate to the project root**:
-   ```bash
-   cd EmployeeeManagement
-   ```
-3. **Build the project**:
+2. **Build the project**:
    ```bash
    mvn clean install
    ```
-4. **Run with Jetty**:
+3. **Run with Jetty**:
    ```bash
    mvn jetty:run
    ```
-5. **Access the application**:
-   Open [http://localhost:8080/EmployeeManagement/](http://localhost:8080/EmployeeManagement/) in your browser.
+4. **Access the application**:
+   Open [http://localhost:8080/](http://localhost:8080/) in your browser.
 
 ## 📂 Project Structure
 
