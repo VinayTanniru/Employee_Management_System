@@ -1,16 +1,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd
                            http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<context:component-scan
-		base-package="com.bitlabs" />
+		base-package="com.ems" />
+
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 
 	<tx:annotation-driven />
 
@@ -29,9 +35,9 @@
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/spring" />
+			value="jdbc:mysql://localhost:3306/spring?allowPublicKeyRetrieval=true&amp;useSSL=false" />
 		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="password" value="changeit" />
 	</bean>
 	<bean name="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
@@ -46,7 +52,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.bitlabs.EmployeModel.Employer</value>
+				<value>com.ems.model.Employee</value>
 			</list>
 		</property>
 	</bean>

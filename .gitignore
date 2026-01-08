@@ -1,0 +1,26 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.restore
+release.properties
+dependency-reduced-pom.xml
+build.log
+.incremental
+.polyglot.build.properties
+
+# IDEs
+.settings/
+.project
+.classpath
+.metadata/
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# System Files
+Thumbs.db
+Desktop.ini
+.DS_Store
